@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 6</title>
+  <link rel="stylesheet" href="activity6.css">
+</head>
+<body>
+
+  <style>
+   * {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f2f2f2;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+
+.form-box {
+background-color: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+width: 300px;
+}
+
+.logo {
+width: 100px;
+margin-bottom: 20px;
+height: center;
+}
+
+input[type="text"], input[type="password"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+
+.button-container {
+display: flex;
+justify-content: space-between;
+}
+
+
+button {
+width: 45%;
+padding: 10px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.login-btn {
+background-color: #4CAF50;
+color: white;
+}
+
+.signup-btn {
+background-color: #008CBA;
+color: white;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+.forgot-password {
+display: block;
+margin-top: 10px;
+color: #007BFF;
+text-decoration: none;
+font-size: 14px;
+}
+
+.forgot-password:hover {
+text-decoration: underline;
+}
+  </style>
+  <div class="container">
+    <div class="form-box">
+      <img src="logo.jpg" alt="Logo" class="logo">
+      <form>
+        <label for="name">Username:</label> 
+        <input type="text" id="username"  required>
+        <label for="name">Password:</label>
+        <input type="password" id="password" required>
+        <div class="button-container">
+          <button type="submit" class="login-btn">Login</button>
+          <button type="button" class="signup-btn">Sign Up</button>
+        </div>
+      </form>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+    </div>
+  </div>
+  
+</body>
+</html>
