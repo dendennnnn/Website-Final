@@ -1,0 +1,389 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #2c3e50;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #1abc9c;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #333;
+  padding: 15px 30px;
+  
+}
+
+.nav-center a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right {
+  position: absolute;
+  right: 30px;
+}
+
+.nav-right a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-center a:hover,
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Section General ni */
+.section,
+.contact-section,
+.portfolio-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  margin-top: -20px; 
+}
+
+
+
+/* Home Info ni */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.photo img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #3498db;
+}
+
+/* Skills ni */
+.skill {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.skill label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.fill {
+  background-color: #3498db;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+/* Contact Form ni*/
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Portfolio Cards (activities) */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Footer last */
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: auto;
+}
+iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+.contact-section {
+  margin-top: 0;
+  padding-top: 40px; 
+}
+
+/*For responsive home portfolio contact, fb,github,IG*/
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .nav-main,
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+
+  .nav-main a,
+  .nav-right a {
+    margin: 10px;
+  }
+
+  .nav-right {
+    position: static;
+  }
+}
+
+
+
+
+
+
+/* Reset and Global Styles 
+*
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8f1;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #231077, #1edba3);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+nav {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffbd69;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #18b694;
+  margin-bottom: 2rem;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #1798b8;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: #1e175f;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .photo-gallery {
+      justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photo-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+.page-wrapper {
+flex: 1;
+}*/
