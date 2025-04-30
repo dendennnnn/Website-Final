@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="act9.css">
+    <script src="act9.js"></script>
+    <title>Activity 9</title>
+</head>
+<body>
+  <style>
+    body {
+    text-align: center  ;
+}
+
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  </style>
+
+  <script>
+    function myFunction() {
+    let txt;
+    let fullName = prompt("Full name: ", "Enter Your Full Name here");
+     
+    if(fullName == null || fullName == "" || fullName == '0' ) {
+        txt = "The field is required!";
+    }
+    else {
+        txt = "Hello, " + fullName + " How are you today?";
+    }
+    document.getElementById("demo").innerHTML = txt;
+    
+}
+  </script>
+    <h2>JavaScript Prompt</h2>
+
+    <button class="button" onclick="myFunction()">Click here!</button>
+    <p id="demo"></p>
+</body>
+</html>
+
+
+
+

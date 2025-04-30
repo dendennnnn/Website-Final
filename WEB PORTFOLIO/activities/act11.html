@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 11</title>
+    <style>
+        .button, .buttons {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #1cdadab9;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41;}
+        .buttons:hover {background-color: #ac1818;}
+
+        .button:active, .buttons:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+            max-width: 350px;
+        }
+
+        p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="column">
+        <h2>For Loop</h2>
+        <form id="forForm">
+            <label for="num1">Enter number:</label>
+            <input type="number" name="num1" id="num1" required><br><br>
+            <label for="num2">Enter number:</label>
+            <input type="number" name="num2" id="num2" required><br><br>
+            <button class="button" type="button" onclick="calculate('for')">Show</button>
+            <button class="buttons" type="reset" onclick="clearFields('forForm')">Clear</button>
+            <p class="sum"></p>
+            <p class="difference"></p>
+            <p class="product"></p>
+            <p class="quotient"></p>
+            <p class="modulus"></p>
+        </form>
+    </div>
+
+    <div class="column">
+        <h2>While Loop</h2>
+        <form id="whileForm">
+            <label for="num1">Enter number:</label>
+            <input type="number" name="num1" id="num1" required><br><br>
+            <label for="num2">Enter number:</label>
+            <input type="number" name="num2" id="num2" required><br><br>
+            <button class="button" type="button" onclick="calculate('while')">Show</button>
+            <button class="buttons" type="reset" onclick="clearFields('whileForm')">Clear</button>
+            <p class="sum"></p>
+            <p class="difference"></p>
+            <p class="product"></p>
+            <p class="quotient"></p>
+            <p class="modulus"></p>
+        </form>
+    </div>
+
+    <div class="column">
+        <h2>Do-While Loop</h2>
+        <form id="doWhileForm">
+            <label for="num1">Enter number:</label>
+            <input type="number" name="num1" id="num1" required><br><br>
+            <label for="num2">Enter number:</label>
+            <input type="number" name="num2" id="num2" required><br><br>
+            <button class="button" type="button" onclick="calculate('doWhile')">Show</button>
+            <button class="buttons" type="reset" onclick="clearFields('doWhileForm')">Clear</button>
+            <p class="sum"></p>
+            <p class="difference"></p>
+            <p class="product"></p>
+            <p class="quotient"></p>
+            <p class="modulus"></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    function calculate(loopType) {
+        const form = document.getElementById(loopType + 'Form');
+        const num1 = parseFloat(form.querySelector('input[name="num1"]').value);
+        const num2 = parseFloat(form.querySelector('input[name="num2"]').value);
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Please enter valid numbers.");
+            return;
+        }
+
+        // Calculations
+        let sum = num1 + num2;  // Sum
+        let diff = num1 - num2;  // Difference
+        let prod = num1 * num2;  // Product
+        let quot = num2 !== 0 ? (num1 / num2).toFixed(2) : "Undefined (div by 0)";  // Quotient (check division by 0)
+        let mod = num2 !== 0 ? num1 % num2 : "Undefined (mod by 0)";  // Modulus (check mod by 0)
+
+      
+        switch (loopType) {
+            case 'for':
+                break;
+            case 'while':
+                break;
+            case 'doWhile':
+                break;
+        }
+
+        // Display results
+        form.querySelector(".sum").innerText = "Sum: " + sum;
+        form.querySelector(".difference").innerText = "Difference: " + diff;
+        form.querySelector(".product").innerText = "Product: " + prod;
+        form.querySelector(".quotient").innerText = "Quotient: " + quot;
+        form.querySelector(".modulus").innerText = "Modulus: " + mod;
+    }
+
+    function clearFields(formId) {
+        const form = document.getElementById(formId);
+        form.querySelector(".sum").innerText = "";
+        form.querySelector(".difference").innerText = "";
+        form.querySelector(".product").innerText = "";
+        form.querySelector(".quotient").innerText = "";
+        form.querySelector(".modulus").innerText = "";
+    }
+</script>
+</body>
+</html>

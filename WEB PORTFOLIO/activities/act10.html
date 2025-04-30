@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="act10.css">
+    <script src="act10.js"></script>
+    <title>Activity 10</title>
+</head>
+<body>
+
+  <style>
+    .button1 {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button2 {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  </style>
+    
+
+    <script>
+    function calculate() {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+
+    if(isNaN(num1) || isNaN(num2)) {
+        document.getElementById("sum").innerHTML = "Please enter valid numbers.";
+        return;
+    }
+
+    else {
+        const sum = num1 + num2;
+        document.getElementById("sum").innerHTML = "The sum is: " + sum;
+
+        const diff = num1 - num2;
+        document.getElementById("diff").innerHTML = "The difference is: " + diff;
+
+        const prod = num1 * num2;
+        document.getElementById("prod").innerHTML = "The Product is: " + prod;
+
+        const quot = num1 / num2;
+        document.getElementById("quot").innerHTML = "The Quotient is: " + quot;
+
+        const mod = num1 % num2;
+        document.getElementById("mod").innerHTML = "The Modulo is: " + mod;
+    }
+
+    function clearfields() {
+        document.getElementById("sum").innerHTML = " ";
+        document.getElementById("diff").innerHTML = " ";
+        document.getElementById("prod").innerHTML = " ";
+        document.getElementById("quot").innerHTML = " ";
+        document.getElementById("mod").innerHTML = " ";
+    }
+}
+    </script>
+    <h2>Arithmetic Operations</h2>
+    <form id="sumForm">
+        <label for="num1">Number 1:</label>
+        <input type="text" id="num1" name="num1"><br><br>
+        <label for="num2">Number 2:</label>
+        <input type="text" id="num2" name="num2"><br><br>
+        <button class="button1" type="button" onclick="calculate()">Calculate All of the Operators</button>
+        <button class="button2" type="reset" onclick="clearFields()">Clear</button>
+    </form>
+
+    <p id="sum"></p>
+    <p id="diff"></p>
+    <p id="prod"></p>
+    <p id="quot"></p>
+    <p id="mod"></p>
+</body>
+</html>
+
+
+
+
+
+
+
